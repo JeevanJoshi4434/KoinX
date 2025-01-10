@@ -32,16 +32,16 @@ class App {
       }
     });
 
-    // // Trigger the first execution immediately
-    // (async () => {
-    //   try {
-    //     console.log("Initial fetch and store of crypto data...");
-    //     await CryptoController.fetchAndStoreCryptoData();
-    //     console.log("Initial crypto data successfully fetched and stored.");
-    //   } catch (error) {
-    //     console.error("Error during initial fetch of crypto data:", error);
-    //   }
-    // })();
+    // Trigger the first execution immediately
+    (async () => {
+      try {
+        console.log("Initial fetch and store of crypto data...");
+        await CryptoController.fetchAndStoreCryptoData();
+        console.log("Initial crypto data successfully fetched and stored.");
+      } catch (error) {
+        console.error("Error during initial fetch of crypto data:", error);
+      }
+    })();
   }
 
   private initializeMiddleware(): void {
@@ -69,7 +69,7 @@ class App {
 
   private initializeErrorHandlers(): void {
     this.app.use((req: Request, res: Response) => {
-      res.status(404).json({ error: 'Route not found' });
+      res.status(404).json({ error: 'Route not found', availableRoutes: '/api/stats?coin=$coinname or /api/deviation?coin=$coinname' });
     });
 
     this.app.use((err: Error, req: Request, res: Response, next: NextFunction) => {

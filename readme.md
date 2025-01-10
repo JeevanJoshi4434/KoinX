@@ -54,8 +54,13 @@ This repository contains the implementation of the tasks assigned by **KoinX** f
 - Deployed the backend API on a cloud platform, making it publicly accessible. 
 
 ## APIs for testing
-- /api/stats?coin=bitcoin
-- /api/deviation?coin=bitcoin
+
+- api/stats?coin=bitcoin
+- api/deviation?coin=bitcoin
+
+## URLs
+- [https://koinx-9ptx.onrender.com/api/stats?coin=bitcoin](https://koinx-9ptx.onrender.com/api/stats?coin=bitcoin)
+- [https://koinx-9ptx.onrender.com/api/deviation?coin=bitcoin](https://koinx-9ptx.onrender.com/api/deviation?coin=bitcoin)
 
 ## Technologies Used
 - **Node.js**: Backend runtime environment.
