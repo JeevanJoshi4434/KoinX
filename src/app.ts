@@ -32,16 +32,6 @@ class App {
       }
     });
 
-    // Trigger the first execution immediately
-    (async () => {
-      try {
-        console.log("Initial fetch and store of crypto data...");
-        await CryptoController.fetchAndStoreCryptoData();
-        console.log("Initial crypto data successfully fetched and stored.");
-      } catch (error) {
-        console.error("Error during initial fetch of crypto data:", error);
-      }
-    })();
   }
 
   private initializeMiddleware(): void {
