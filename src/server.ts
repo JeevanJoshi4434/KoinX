@@ -20,7 +20,7 @@ process.on('unhandledRejection', (reason) => {
 // function for keeping server alive so it doesn't shut down after 50 second (ignore it)
 async function serverKeepAlive() {
   try {
-    const res = await axios.get('https://koinx-9ptx.onrender.com/api/stats');
+    const res = await axios.get('https://koinx-9ptx.onrender.com/api/stats?coin=bitcoin');
     if (res.data) {
       console.log("OK");
     }
